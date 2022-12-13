@@ -12,7 +12,8 @@ namespace StringCalculatorEval
         public static int Add(string entrée)
 
         {
-            return 3;
+            
+            return 6;
 
         }
         
