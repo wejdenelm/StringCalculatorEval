@@ -48,6 +48,26 @@
             Assert.Equal(x + y + z, résultat);
         }
 
+        [Fact]
+        public void SautsDeLignesAutorisés()
+        {
+            // Quand on a une chaîne de nombres comprenant un saut de ligne
+
+            var entrée = string.Join(',', new int[] { 1, 2, 3 });
+            var entréeAvecSaut = AddString.Add(entrée);
+
+            // Et quand on appelle Add
+            var résultatAvecSaut = AddString.Add(entrée);
+
+            //Elle renvoie toujours la somme des nombres
+
+            var résultatSansSaut = AddString.Add(entrée);
+
+            Assert.Equal(résultatSansSaut, résultatAvecSaut);
+        }
+
+    
+
 
 
 

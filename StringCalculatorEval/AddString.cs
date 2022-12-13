@@ -19,9 +19,15 @@ namespace StringCalculatorEval
             return part.Select(int.Parse).Sum();
 
 
-           
-
         }
+
+
         
+
     }
+
+   
+
+
+
 }
