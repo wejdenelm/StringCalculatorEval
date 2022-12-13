@@ -26,6 +26,12 @@ namespace StringCalculatorEval
 
     }
 
+    public class ExceptionNegatif
+
+    {
+        public int positionNombreNegatif;
+        public int nombreNegatif;
+    }
    
 
 

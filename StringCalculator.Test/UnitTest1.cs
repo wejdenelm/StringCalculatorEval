@@ -66,7 +66,22 @@
             Assert.Equal(résultatSansSaut, résultatAvecSaut);
         }
 
-    
+        [Fact]
+        public void NombresNégatifsNonAutorisés()
+        {
+            // Quand on a une chaîne de nombres comprenant un chiffre négatif 
+            var entrée = string.Join(',', new int[] { 1, 2, -3 });
+
+            // Et quand on appelle Add
+            void Act() => AddString.Add(entrée);
+
+            // Elle renvoie une exception et on donne la position du nombre négatif 
+            var exception = Assert.Throws<ExceptionNegatif>(Act);
+
+            Assert.Equal(-3, exception.nombreNegatif);
+            Assert.Equal(-3, exception.positionNombreNegatif);
+        }
+
 
 
 
