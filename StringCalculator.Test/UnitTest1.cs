@@ -81,6 +81,27 @@
             Assert.Equal(-3, exception.nombreNegatif);
             Assert.Equal(-3, exception.positionNombreNegatif);
         }
+        [Fact]
+        public void NombresGrands(int résultatPetitsnombres, int résultatGrandsNombres)
+        {
+            // Quand on a une chaîne de nombres comprenant un nombre supérieur à 1000
+
+            var nombres = new int[] { 1001, 2, 3 };
+            var entrée = string.Join(',', nombres);
+
+            // Et quand on appelle Add
+
+            var résultatAvecGrandNombres = AddString.Add(entrée);
+
+            // Elle renvoie que les nombres inférieurs à 1000
+
+            var PetitsNombres = nombres.Where(nombres => nombres <= 1000);
+            var entréePetitsNombres = string.Join(',', PetitsNombres);
+            var résultatPetitsNombres = AddString.Add(entréePetitsNombres);
+
+            Assert.Equal(résultatPetitsNombres, résultatGrandsNombres);
+
+        }
 
 
 

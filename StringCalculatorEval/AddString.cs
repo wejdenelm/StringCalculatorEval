@@ -22,18 +22,25 @@ namespace StringCalculatorEval
         }
 
 
-        
+
 
     }
 
     public class ExceptionNegatif
 
     {
+        internal ExceptionNegatif()
+        {
+
         public int positionNombreNegatif;
-        public int nombreNegatif;
+        public int nombreNegatif; }
+
+    public int positionNombreNegatif { get; }
+    public string nombreNegatif { get;}
     }
-   
-
-
-
 }
+
+
+
+
+
